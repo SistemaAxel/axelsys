@@ -12,7 +12,7 @@ from anvil.tables import app_tables
 class Aula_Aula(Aula_AulaTemplate):
   def __init__(self, aula: int, **properties):
     # Set Form properties and Data Bindings.
-    user = Login()
+    self.user = Login()
     self.aula = app_tables.aulas.get_by_id(aula)
     self.aulaid = aula
     self.init_components(**properties)
@@ -26,3 +26,26 @@ class Aula_Aula(Aula_AulaTemplate):
   def button_1_copy_2_click(self, **event_args):
     """This method is called when the button is clicked"""
     open_form('Aula_Responsables', aula=self.aulaid)
+
+  def button_2_copy_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('Aula_Aulas')
+
+  def button_x_copy_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    us = app_tables.users.search(email=self.correo.text)
+    if len(us) == 0:
+      alert("El usuario no existe, el usuario debe de estar registrado en Sistemas Axel para continuar.")
+      return
+    users = self.aula['users']
+    users.append(us[0])
+    self.aula.update(users=users)
+    self.add_card.visible = False
+
+  def button_1_copy_4_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    self.add_card.visible = False
+
+  def button_1_copy_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    self.add_card.visible = True

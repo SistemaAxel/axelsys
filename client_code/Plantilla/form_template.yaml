@@ -9,7 +9,10 @@ components:
   layout_properties: {slot: sidebar}
   components: []
 - name: label_1
-  properties: {text: AxelAdmin}
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: Sys Axel, font_size: null, font: '', spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: '', bold: false, underline: false,
+    icon: ''}
   type: Label
   layout_properties: {slot: title}
 - name: column_panel_2
@@ -82,8 +85,8 @@ components:
           grid_position: BSQMTQ,VVZTSB
 - type: Button
   properties: {role: null, align: right, tooltip: '', border: '', enabled: true, foreground: 'theme:Header
-      Background', visible: true, text: Volver a Inicio, font_size: null, font: '',
-    spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: 'theme:Accent
+      Background', visible: true, text: Inicio, font_size: null, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: 'theme:Accent
       1', bold: false, underline: false, icon: ''}
   name: button_2
   layout_properties: {slot: nav-right}

@@ -12,8 +12,8 @@ from anvil.tables import app_tables
 class Main(MainTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
-    user = Login()
     self.init_components(**properties)
+    self.user = Login()
 
     # Any code you write here will run before the form opens.
 
@@ -26,5 +26,9 @@ class Main(MainTemplate):
     open_form('Aula_Responsables')
 
   def button_1_copy_5_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('Aula_Aulas')
+
+  def button_1_copy_click(self, **event_args):
     """This method is called when the button is clicked"""
     open_form('Aula_Aulas')

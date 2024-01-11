@@ -9,7 +9,10 @@ components:
   layout_properties: {slot: sidebar}
   components: []
 - name: label_1
-  properties: {text: AxelAdmin}
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: Sys Axel, font_size: null, font: '', spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: '', bold: false, underline: false,
+    icon: ''}
   type: Label
   layout_properties: {slot: title}
 - name: column_panel_2
@@ -26,7 +29,7 @@ components:
     components:
     - type: Button
       properties: {role: null, align: full, tooltip: '', border: '', enabled: true,
-        foreground: 'theme:Header Background', visible: true, text: Mis Aulas, font_size: null,
+        foreground: 'theme:Header Background', visible: true, text: Mis Aulas, font_size: 20,
         font: '', spacing_above: small, icon_align: top, spacing_below: small, italic: false,
         background: 'theme:Accent 1', bold: false, underline: false, icon: 'fa:users'}
       name: button_1_copy
@@ -35,27 +38,28 @@ components:
         grid_position: LMCWJQ,UWGFFX
         width: 127
         expand: false
+      event_bindings: {click: button_1_copy_click}
     - type: Button
       properties: {role: null, align: full, tooltip: '', border: '', enabled: true,
         foreground: 'theme:Header Background', visible: true, text: Menu Comedor,
-        font_size: null, font: '', spacing_above: small, icon_align: top, spacing_below: small,
+        font_size: 20, font: '', spacing_above: small, icon_align: top, spacing_below: small,
         italic: false, background: 'theme:Sidebar Background', bold: false, underline: false,
         icon: 'fa:calendar'}
       name: button_1_copy_3
       layout_properties:
         col_widths: {}
         grid_position: LMCWJQ,UWGFFX
-        width: 127
+        width: 174
         expand: false
     - type: Button
       properties: {role: null, align: full, tooltip: '', border: '', enabled: true,
         foreground: 'theme:Header Background', visible: true, text: Soporte Tecnico,
-        font_size: null, font: '', spacing_above: small, icon_align: top, spacing_below: small,
+        font_size: 20, font: '', spacing_above: small, icon_align: top, spacing_below: small,
         italic: false, background: 'theme:Sidebar Background', bold: false, underline: false,
         icon: 'fa:question'}
       name: button_1_copy_2
       layout_properties:
         col_widths: {}
         grid_position: LMCWJQ,UWGFFX
-        width: 128
+        width: 202
         expand: false

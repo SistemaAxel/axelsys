@@ -9,14 +9,76 @@ components:
   layout_properties: {slot: sidebar}
   components: []
 - name: label_1
-  properties: {text: AxelAdmin}
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: Sys Axel, font_size: null, font: '', spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: '', bold: false, underline: false,
+    icon: ''}
   type: Label
   layout_properties: {slot: title}
 - name: column_panel_2
-  properties: {}
+  properties: {col_widths: '{}'}
   type: ColumnPanel
   layout_properties: {slot: default}
   components:
+  - type: ColumnPanel
+    properties: {role: card, tooltip: '', border: '', foreground: '', visible: false,
+      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+      spacing_below: small, background: ''}
+    name: add_card
+    layout_properties: {grid_position: 'QKXNTE,QASWJF'}
+    components:
+    - name: aula_name_copy
+      properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+        visible: true, text: Compartir Acceso, font_size: 30, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+        underline: false, icon: ''}
+      type: Label
+      layout_properties:
+        col_widths: {}
+        grid_position: BMHVHF,FRTQWJ
+    - type: Label
+      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+        visible: true, text: Correo del usuario, font_size: null, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+        underline: false, icon: ''}
+      name: label_2
+      layout_properties: {grid_position: 'AVLTBJ,WUUMHM'}
+    - type: TextBox
+      properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: Correo del usuario,
+        border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+        font: '', spacing_above: small, type: email, spacing_below: small, italic: false,
+        background: '', bold: false, underline: false}
+      name: correo
+      layout_properties: {grid_position: 'OCPFRM,GVHTGW'}
+    - type: FlowPanel
+      properties: {role: null, vertical_align: full, spacing: tiny, align: center,
+        tooltip: '', border: '', foreground: '', visible: true, spacing_above: small,
+        spacing_below: small, background: ''}
+      name: flow_panel_2
+      layout_properties:
+        col_widths: {}
+        grid_position: PEQCRH,CSKFYU
+      components:
+      - type: Button
+        properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+          foreground: 'theme:Header Background', visible: true, text: Compartir, font_size: 20,
+          font: '', spacing_above: small, icon_align: top, spacing_below: small, italic: false,
+          background: 'theme:Accent 1', bold: false, underline: false, icon: ''}
+        name: button_1_copy_3
+        layout_properties:
+          col_widths: {}
+          grid_position: NOHFHE,SMXTAD
+        event_bindings: {click: button_x_copy_click}
+      - type: Button
+        properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+          foreground: 'theme:Header Background', visible: true, text: Cerrar, font_size: 20,
+          font: '', spacing_above: small, icon_align: top, spacing_below: small, italic: false,
+          background: 'theme:Accent 1', bold: false, underline: false, icon: ''}
+        name: button_1_copy_4
+        layout_properties:
+          col_widths: {}
+          grid_position: NOHFHE,SMXTAD
+        event_bindings: {click: button_1_copy_4_click}
   - name: card_1
     properties: {role: card, col_widths: '{}'}
     type: ColumnPanel
@@ -39,25 +101,34 @@ components:
       - type: Button
         properties: {role: null, align: full, tooltip: '', border: '', enabled: true,
           foreground: 'theme:Header Background', visible: true, text: Compartir Acceso,
-          font_size: null, font: '', spacing_above: small, icon_align: top, spacing_below: small,
+          font_size: 20, font: '', spacing_above: small, icon_align: top, spacing_below: small,
           italic: false, background: 'theme:Accent 1', bold: false, underline: false,
           icon: 'fa:share-alt'}
         name: button_1_copy
-        layout_properties: {grid_position: 'KKHROP,TXLDAX', width: 96.31}
+        layout_properties: {grid_position: 'KKHROP,TXLDAX', width: 187.31}
+        event_bindings: {click: button_1_copy_click}
       - type: Button
         properties: {role: null, align: full, tooltip: '', border: '', enabled: true,
           foreground: 'theme:Header Background', visible: true, text: Responsables del aula,
-          font_size: null, font: '', spacing_above: small, icon_align: top, spacing_below: small,
+          font_size: 20, font: '', spacing_above: small, icon_align: top, spacing_below: small,
           italic: false, background: 'theme:Accent 1', bold: false, underline: false,
           icon: 'fa:users'}
         name: button_1_copy_2
-        layout_properties: {grid_position: 'KKHROP,TXLDAX', width: 117.322}
+        layout_properties: {grid_position: 'KKHROP,TXLDAX', width: 253.322}
         event_bindings: {click: button_1_copy_2_click}
 - type: Button
   properties: {role: null, align: right, tooltip: '', border: '', enabled: true, foreground: 'theme:Header
-      Background', visible: true, text: Volver a Inicio, font_size: null, font: '',
-    spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: 'theme:Accent
+      Background', visible: true, text: Inicio, font_size: null, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: 'theme:Accent
       1', bold: false, underline: false, icon: ''}
   name: button_2
   layout_properties: {slot: nav-right}
   event_bindings: {click: button_2_click}
+- type: Button
+  properties: {role: null, align: right, tooltip: '', border: '', enabled: true, foreground: 'theme:Header
+      Background', visible: true, text: Aulas, font_size: null, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: 'theme:Accent
+      1', bold: false, underline: false, icon: ''}
+  name: button_2_copy
+  layout_properties: {slot: nav-right}
+  event_bindings: {click: button_2_copy_click}

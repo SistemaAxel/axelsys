@@ -9,7 +9,10 @@ components:
   layout_properties: {slot: sidebar}
   components: []
 - name: label_1
-  properties: {text: AxelAdmin}
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: Sys Axel, font_size: null, font: '', spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: '', bold: false, underline: false,
+    icon: ''}
   type: Label
   layout_properties: {slot: title}
 - name: column_panel_2
@@ -18,8 +21,10 @@ components:
   layout_properties: {slot: default}
   components:
   - type: ColumnPanel
-    properties: {role: card, col_widths: '{"BMQIPO":45}'}
-    name: card_2
+    properties: {role: card, tooltip: '', border: '', foreground: '', visible: false,
+      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{"BMQIPO":45}',
+      spacing_below: small, background: ''}
+    name: add_crd
     layout_properties: {grid_position: 'SFGMNR,GJCTUV'}
     components:
     - name: label_2_copy
@@ -45,7 +50,7 @@ components:
         border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
         font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
         background: '', bold: false, underline: false}
-      name: text_box_1
+      name: escuela
       layout_properties: {grid_position: 'OUUZYS,BMQIPO'}
     - type: Label
       properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
@@ -61,7 +66,7 @@ components:
         border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
         font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
         background: '', bold: false, underline: false}
-      name: text_box_2
+      name: aula
       layout_properties: {grid_position: 'HJPRPF,AUJHXM'}
     - type: Label
       properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
@@ -71,21 +76,39 @@ components:
       name: label_3
       layout_properties: {grid_position: 'JJKAEE,UWXKXY'}
     - type: TextArea
-      properties: {role: null, align: left, height: '', tooltip: '', placeholder: Dirección,
+      properties: {role: null, align: left, height: 79.7926, tooltip: '', placeholder: Dirección,
         border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
         auto_expand: true, font: '', spacing_above: small, spacing_below: small, italic: false,
         background: '', bold: false, underline: false}
-      name: text_area_1
+      name: direccion
       layout_properties: {grid_position: 'ESHJIZ,PJUNKA'}
-    - type: Button
-      properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
-        foreground: 'theme:Header Background', visible: true, text: Añadir Aula, font_size: 25,
-        font: '', spacing_above: small, icon_align: top, spacing_below: small, italic: false,
-        background: 'theme:Accent 1', bold: false, underline: false, icon: 'fa:plus'}
-      name: button_1_copy
-      layout_properties:
-        col_widths: {}
-        grid_position: NOHFHE,SMXTAD
+    - type: FlowPanel
+      properties: {role: null, vertical_align: full, spacing: tiny, align: center,
+        tooltip: '', border: '', foreground: '', visible: true, spacing_above: small,
+        spacing_below: small, background: ''}
+      name: flow_panel_2
+      layout_properties: {grid_position: 'FAZVPT,UBRPHH'}
+      components:
+      - type: Button
+        properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+          foreground: 'theme:Header Background', visible: true, text: Añadir Aula,
+          font_size: 20, font: '', spacing_above: small, icon_align: top, spacing_below: small,
+          italic: false, background: 'theme:Accent 1', bold: false, underline: false,
+          icon: ''}
+        name: button_1_copy
+        layout_properties:
+          col_widths: {}
+          grid_position: NOHFHE,SMXTAD
+        event_bindings: {click: button_1_copy_click}
+      - type: Button
+        properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
+          foreground: 'theme:Header Background', visible: true, text: Cerrar, font_size: 20,
+          font: '', spacing_above: small, icon_align: top, spacing_below: small, italic: false,
+          background: 'theme:Accent 1', bold: false, underline: false, icon: ''}
+        name: button_1_copy_2
+        layout_properties:
+          col_widths: {}
+          grid_position: NOHFHE,SMXTAD
   - name: card_1
     properties: {role: card, col_widths: '{}'}
     type: ColumnPanel
@@ -108,9 +131,9 @@ components:
       - type: Button
         properties: {role: null, align: center, tooltip: '', border: '', enabled: true,
           foreground: 'theme:Header Background', visible: true, text: Añadir Aula,
-          font_size: null, font: '', spacing_above: small, icon_align: top, spacing_below: small,
+          font_size: 20, font: '', spacing_above: small, icon_align: top, spacing_below: small,
           italic: false, background: 'theme:Accent 1', bold: false, underline: false,
-          icon: 'fa:plus'}
+          icon: ''}
         name: button_1
         layout_properties: {grid_position: 'QKMSMA,YXFFKT'}
         event_bindings: {click: button_1_click}
@@ -141,8 +164,8 @@ components:
         layout_properties: {}
 - type: Button
   properties: {role: null, align: right, tooltip: '', border: '', enabled: true, foreground: 'theme:Header
-      Background', visible: true, text: Volver a Inicio, font_size: null, font: '',
-    spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: 'theme:Accent
+      Background', visible: true, text: Inicio, font_size: null, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: 'theme:Accent
       1', bold: false, underline: false, icon: ''}
   name: button_2
   layout_properties: {slot: nav-right}

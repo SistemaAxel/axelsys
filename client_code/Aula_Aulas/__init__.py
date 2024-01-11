@@ -12,9 +12,9 @@ from anvil.tables import app_tables
 class Aula_Aulas(Aula_AulasTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
-    user = Login()
+    self.user = Login()
     self.init_components(**properties)
-    self.repeating_panel_1.items = app_tables.aulas.search(users=[user])
+    self.repeating_panel_1.items = app_tables.aulas.search(users=[self.user])
     # Any code you write here will run before the form opens.
 
   def button_2_click(self, **event_args):
@@ -23,4 +23,10 @@ class Aula_Aulas(Aula_AulasTemplate):
 
   def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
-    pass
+    self.add_crd.visible = True
+
+  def button_1_copy_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    app_tables.aulas.add_row(Aula=self.aula.text, Escuela=self.escuela.text, Direccion=self.direccion.text, users=[self.user])
+    self.add_crd.visible = False
+    self.repeating_panel_1.items = app_tables.aulas.search(users=[self.user])
