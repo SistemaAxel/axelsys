@@ -1,4 +1,4 @@
-from ._anvil_designer import MainTemplate
+from ._anvil_designer import RowTemplate1Template
 from anvil import *
 import anvil.server
 import anvil.google.auth, anvil.google.drive
@@ -6,25 +6,16 @@ from anvil.google.drive import app_files
 import anvil.users
 import anvil.tables as tables
 import anvil.tables.query as q
-from ..Auth import Login
 from anvil.tables import app_tables
 
-class Main(MainTemplate):
+class RowTemplate1(RowTemplate1Template):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
-    user = Login()
     self.init_components(**properties)
 
     # Any code you write here will run before the form opens.
 
-  def button_2_click(self, **event_args):
-    """This method is called when the button is clicked"""
-    open_form('Main')
-
   def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form('Aula_Responsables')
-
-  def button_1_copy_5_click(self, **event_args):
-    """This method is called when the button is clicked"""
-    open_form('Aula_Aulas')
+    
+    anvil.open_form('Aula_Aula', aula = self.item.get_id())

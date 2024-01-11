@@ -1,0 +1,63 @@
+is_package: true
+container:
+  type: HtmlTemplate
+  properties: {html: '@theme:dashboard.html'}
+components:
+- name: column_panel_1
+  properties: {}
+  type: ColumnPanel
+  layout_properties: {slot: sidebar}
+  components: []
+- name: label_1
+  properties: {text: AxelAdmin}
+  type: Label
+  layout_properties: {slot: title}
+- name: column_panel_2
+  properties: {}
+  type: ColumnPanel
+  layout_properties: {slot: default}
+  components:
+  - name: card_1
+    properties: {role: card, col_widths: '{}'}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'PKLHYY,UIOZXL'}
+    components:
+    - name: aula_name
+      properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+        visible: true, text: 'Aula, Escuela', font_size: 30, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+        underline: false, icon: ''}
+      type: Label
+      layout_properties: {grid_position: 'LNBZDO,UWKYVA'}
+    - type: FlowPanel
+      properties: {role: null, vertical_align: full, spacing: tiny, align: center,
+        tooltip: '', border: '', foreground: '', visible: true, spacing_above: small,
+        spacing_below: small, background: ''}
+      name: flow_panel_1
+      layout_properties: {grid_position: 'ULDOQZ,OCZFUF'}
+      components:
+      - type: Button
+        properties: {role: null, align: full, tooltip: '', border: '', enabled: true,
+          foreground: 'theme:Header Background', visible: true, text: Compartir Acceso,
+          font_size: null, font: '', spacing_above: small, icon_align: top, spacing_below: small,
+          italic: false, background: 'theme:Accent 1', bold: false, underline: false,
+          icon: 'fa:share-alt'}
+        name: button_1_copy
+        layout_properties: {grid_position: 'KKHROP,TXLDAX', width: 96.31}
+      - type: Button
+        properties: {role: null, align: full, tooltip: '', border: '', enabled: true,
+          foreground: 'theme:Header Background', visible: true, text: Responsables del aula,
+          font_size: null, font: '', spacing_above: small, icon_align: top, spacing_below: small,
+          italic: false, background: 'theme:Accent 1', bold: false, underline: false,
+          icon: 'fa:users'}
+        name: button_1_copy_2
+        layout_properties: {grid_position: 'KKHROP,TXLDAX', width: 117.322}
+        event_bindings: {click: button_1_copy_2_click}
+- type: Button
+  properties: {role: null, align: right, tooltip: '', border: '', enabled: true, foreground: 'theme:Header
+      Background', visible: true, text: Volver a Inicio, font_size: null, font: '',
+    spacing_above: small, icon_align: left, spacing_below: small, italic: false, background: 'theme:Accent
+      1', bold: false, underline: false, icon: ''}
+  name: button_2
+  layout_properties: {slot: nav-right}
+  event_bindings: {click: button_2_click}

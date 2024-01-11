@@ -11,16 +11,16 @@ services:
 - source: /runtime/services/google.yml
   client_config: {}
   server_config: {}
-startup: {type: module, module: Auth}
-package_name: AxelAula
+startup: {type: form, module: Main}
+package_name: Sistemas_Axel
 allow_embedding: false
-name: AxelAula
+name: Sistemas Axel
 runtime_options: {version: 2, client_version: '3', server_version: python3-full, server_spec: null}
-metadata: {logo_img: 'asset:Logo AxelAula.png'}
+metadata: {logo_img: 'asset:Logo Axel.png'}
 startup_form: null
 db_schema:
   users:
-    client: none
+    client: search
     server: full
     columns:
     - name: email
@@ -51,3 +51,41 @@ db_schema:
       admin_ui: {order: 8, width: 200}
       type: datetime
     title: Users
+  aulas:
+    client: full
+    server: full
+    columns:
+    - name: Identificador
+      admin_ui: {width: 200, order: 0}
+      type: string
+    - name: Escuela
+      admin_ui: {width: 200, order: 1}
+      type: string
+    - name: Aula
+      admin_ui: {width: 200, order: 2}
+      type: string
+    - name: Direccion
+      admin_ui: {width: 200, order: 3}
+      type: string
+    - name: users
+      admin_ui: {width: 200, order: 4}
+      type: link_multiple
+      target: users
+    title: Aulas
+  responsables:
+    client: full
+    server: full
+    columns:
+    - name: Nombre
+      admin_ui: {width: 200, order: 0}
+      type: string
+    - name: Telefono
+      admin_ui: {width: 200, order: 1}
+      type: string
+    - name: Correo
+      admin_ui: {width: 200, order: 2}
+      type: string
+    - name: Notas
+      admin_ui: {width: 200, order: 3}
+      type: string
+    title: Responsables

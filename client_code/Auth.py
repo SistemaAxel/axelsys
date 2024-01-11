@@ -13,5 +13,8 @@ import anvil.server
 #    Module1.say_hello()
 #
 
-def say_hello():
-  print("Hello, world")
+def Login():
+  if anvil.users.get_user() == None:
+    anvil.users.login_with_form(allow_cancel=False)
+  user = anvil.users.get_user()
+  return user
