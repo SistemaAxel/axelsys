@@ -1,7 +1,4 @@
-dependencies:
-- dep_id: dep_g5y6egdac2lha
-  version: {dev: false}
-  resolution_hints: {app_id: C6ZZPAPN4YYF5NVJ, name: Anvil Extras, package_name: anvil_extras}
+dependencies: []
 services:
 - source: /runtime/services/tables.yml
   client_config: {}
@@ -14,12 +11,13 @@ services:
 - source: /runtime/services/google.yml
   client_config: {}
   server_config: {}
+startup: {type: module, module: Auth}
 package_name: AxelAula
 allow_embedding: false
 name: AxelAula
 runtime_options: {version: 2, client_version: '3', server_version: python3-full, server_spec: null}
 metadata: {logo_img: 'asset:Logo AxelAula.png'}
-startup_form: Form1
+startup_form: null
 db_schema:
   users:
     client: none
