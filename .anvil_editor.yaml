@@ -1,8 +1,12 @@
 unique_ids:
-  forms: {}
-  modules: {}
-  server_modules: {}
+  forms:
+    Form1: '1704999473616896630718207.1975'
+  modules:
+    Auth: '1704999479537165528197232.87793'
+  server_modules:
+    ServerModule1: '1704999477269870675772157.7437'
   assets:
+    Logo AxelAula.png: '1704999558135610525019546.5605'
     dashboard.html: W33PYWXG752YF5XIUJGXHYSXSERO3PSV
-    theme.css: E7U432D7JNZOTDGULHPGIXFV5FBSLY7G
     single-column.html: PCVBEGRGIUVPQZCAPHYDT2GII5IPRUZJ
+    theme.css: E7U432D7JNZOTDGULHPGIXFV5FBSLY7G
