@@ -10,8 +10,7 @@ unique_ids:
   modules:
     Auth: '1704999479537165528197232.87793'
     startup: '170500774133281500258271.9615'
-  server_modules:
-    ServerModule1: '1704999477269870675772157.7437'
+  server_modules: {}
   assets:
     Logo Axel.png: '1705001003230172033103983.6962'
     Logo AxelAula.png: '1704999558135610525019546.5605'
