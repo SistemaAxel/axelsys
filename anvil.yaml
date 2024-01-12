@@ -93,3 +93,41 @@ db_schema:
       type: link_single
       target: aulas
     title: Responsables
+  comedores:
+    client: full
+    server: full
+    columns:
+    - name: Nombre
+      admin_ui: {width: 200, order: 0}
+      type: string
+    - name: Escuela
+      admin_ui: {width: 200, order: 1}
+      type: string
+    - name: TipoMenu
+      admin_ui: {width: 200, order: 2}
+      type: string
+    title: Comedores
+  comedores_cal:
+    client: full
+    server: full
+    columns:
+    - name: Menu
+      admin_ui: {width: 200, order: 0}
+      type: link_single
+      target: comedores
+    - name: plato1
+      admin_ui: {width: 200, order: 1}
+      type: string
+    - name: plato2
+      admin_ui: {width: 200, order: 2}
+      type: string
+    - name: plato3
+      admin_ui: {width: 200, order: 3}
+      type: string
+    - name: plato4
+      admin_ui: {width: 200, order: 4}
+      type: string
+    - name: Dia
+      admin_ui: {width: 200, order: 5}
+      type: date
+    title: Comedores_Cal

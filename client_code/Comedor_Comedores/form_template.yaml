@@ -1,0 +1,68 @@
+is_package: true
+container:
+  type: HtmlTemplate
+  properties: {html: '@theme:dashboard.html'}
+components:
+- name: column_panel_1
+  properties: {}
+  type: ColumnPanel
+  layout_properties: {slot: sidebar}
+  components: []
+- name: label_1
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: Sys Axel, font_size: null, font: '', spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: '', bold: false, underline: false,
+    icon: ''}
+  type: Label
+  layout_properties: {slot: title}
+- name: column_panel_2
+  properties: {}
+  type: ColumnPanel
+  layout_properties: {slot: default}
+  components:
+  - name: card_1
+    properties: {role: card, col_widths: '{}'}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'PKLHYY,UIOZXL'}
+    components:
+    - name: label_2
+      properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+        visible: true, text: Comedores, font_size: 30, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+        underline: false, icon: ''}
+      type: Label
+      layout_properties: {grid_position: 'LNBZDO,UWKYVA'}
+    - type: DataGrid
+      properties:
+        role: null
+        columns:
+        - {id: SXBIPD, title: Nombre, data_key: Nombre, $$hashKey: 'object:6128'}
+        - {id: YZOIFT, title: Escuela, data_key: Escuela, $$hashKey: 'object:6129'}
+        - {id: JNCKDW, title: Menu, data_key: TipoMenu, $$hashKey: 'object:6130'}
+        - {id: GHGQBG, title: Opciones, data_key: '', $$hashKey: 'object:6134'}
+        auto_header: true
+        tooltip: ''
+        border: ''
+        foreground: ''
+        rows_per_page: 20
+        visible: true
+        wrap_on: mobile
+        show_page_controls: true
+        spacing_above: small
+        spacing_below: small
+        background: ''
+      name: data_grid_1
+      layout_properties: {grid_position: 'PEYTEM,WYFFOJ'}
+      components:
+      - type: RepeatingPanel
+        properties: {spacing_above: none, spacing_below: none, item_template: Comedor_Comedores.RowTemplate3}
+        name: repeating_panel_1
+        layout_properties: {}
+- type: Button
+  properties: {role: null, align: right, tooltip: '', border: '', enabled: true, foreground: 'theme:Header
+      Background', visible: true, text: Inicio, font_size: null, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: 'theme:Accent
+      1', bold: false, underline: false, icon: ''}
+  name: button_2
+  layout_properties: {slot: nav-right}
+  event_bindings: {click: button_2_click}

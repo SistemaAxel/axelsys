@@ -43,9 +43,9 @@ components:
       properties: {role: null, align: full, tooltip: '', border: '', enabled: true,
         foreground: 'theme:Header Background', visible: true, text: Menu Comedor,
         font_size: 20, font: '', spacing_above: small, icon_align: top, spacing_below: small,
-        italic: false, background: 'theme:Sidebar Background', bold: false, underline: false,
+        italic: false, background: 'theme:Accent 1', bold: false, underline: false,
         icon: 'fa:calendar'}
-      name: button_1_copy_3
+      name: menucomedorbtn
       layout_properties:
         col_widths: {}
         grid_position: LMCWJQ,UWGFFX
