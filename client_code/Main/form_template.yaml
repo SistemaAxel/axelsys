@@ -40,10 +40,10 @@ components:
         expand: false
       event_bindings: {click: button_1_copy_click}
     - type: Button
-      properties: {role: null, align: full, tooltip: '', border: '', enabled: true,
-        foreground: 'theme:Header Background', visible: true, text: Menu Comedor,
+      properties: {role: null, align: full, tooltip: '', border: '', enabled: false,
+        foreground: 'theme:Header Background', visible: false, text: Menu Comedor,
         font_size: 20, font: '', spacing_above: small, icon_align: top, spacing_below: small,
-        italic: false, background: 'theme:Accent 1', bold: false, underline: false,
+        italic: false, background: 'theme:Sidebar Background', bold: false, underline: false,
         icon: 'fa:calendar'}
       name: menucomedorbtn
       layout_properties:

@@ -14,7 +14,7 @@ class Main(MainTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
     self.user = Login()
-    self.menucomedorbtn.visible = get_url_hash() == "edit_comedor" or True
+    self.menucomedorbtn.visible = get_url_hash() == "edit_comedor"
 
     # Any code you write here will run before the form opens.
 
