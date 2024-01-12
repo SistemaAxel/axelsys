@@ -26,7 +26,7 @@ class Aula_Responsables(Aula_ResponsablesTemplate):
 
   def button_1_copy_2_click(self, **event_args):
     """This method is called when the button is clicked"""
-    pass
+    self.addcard.visible = True
 
   def button_2_copy_click(self, **event_args):
     """This method is called when the button is clicked"""

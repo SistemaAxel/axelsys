@@ -35,7 +35,7 @@ components:
       type: Label
       layout_properties:
         col_widths: {}
-        grid_position: TVDDXX,VSHBUT
+        grid_position: JOONQP,HJINEV
     - type: Label
       properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
         visible: true, text: Nombre, font_size: null, font: '', spacing_above: small,
@@ -152,7 +152,7 @@ components:
         foreground: ''
         rows_per_page: 20
         visible: true
-        wrap_on: never
+        wrap_on: mobile
         show_page_controls: true
         spacing_above: small
         spacing_below: small
