@@ -51,6 +51,7 @@ components:
         grid_position: LMCWJQ,UWGFFX
         width: 174
         expand: false
+      event_bindings: {click: menucomedorbtn_click}
     - type: Button
       properties: {role: null, align: full, tooltip: '', border: '', enabled: true,
         foreground: 'theme:Header Background', visible: true, text: Soporte Tecnico,

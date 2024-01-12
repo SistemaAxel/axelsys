@@ -33,3 +33,7 @@ class Main(MainTemplate):
   def button_1_copy_click(self, **event_args):
     """This method is called when the button is clicked"""
     open_form('Aula_Aulas')
+
+  def menucomedorbtn_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('Comedor_Comedores')
