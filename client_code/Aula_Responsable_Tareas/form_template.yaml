@@ -1,0 +1,199 @@
+is_package: true
+container:
+  type: HtmlTemplate
+  properties: {html: '@theme:dashboard.html'}
+components:
+- name: column_panel_1
+  properties: {}
+  type: ColumnPanel
+  layout_properties: {slot: sidebar}
+  components: []
+- name: label_1
+  properties: {role: null, align: left, tooltip: '', border: '', foreground: '', visible: true,
+    text: Sys Axel, font_size: null, font: '', spacing_above: small, icon_align: left,
+    spacing_below: small, italic: false, background: '', bold: false, underline: false,
+    icon: ''}
+  type: Label
+  layout_properties: {slot: title}
+- name: column_panel_2
+  properties: {col_widths: '{}'}
+  type: ColumnPanel
+  layout_properties: {slot: default}
+  components:
+  - type: ColumnPanel
+    properties: {role: card, tooltip: '', border: '', foreground: '', visible: false,
+      wrap_on: mobile, col_spacing: medium, spacing_above: small, col_widths: '{}',
+      spacing_below: small, background: ''}
+    name: addcard
+    layout_properties: {grid_position: 'HKJZVR,KDHWOT'}
+    components:
+    - name: name_copy
+      properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+        visible: true, text: Añadir Tarea, font_size: 30, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+        underline: false, icon: ''}
+      type: Label
+      layout_properties:
+        col_widths: {}
+        grid_position: SLBDTM,HJZTWF
+    - type: Label
+      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+        visible: true, text: Fecha, font_size: null, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+        underline: false, icon: ''}
+      name: label_4
+      layout_properties: {grid_position: 'DRTHPG,RPNIYL'}
+    - type: DatePicker
+      properties: {role: null, align: left, max_date: '', pick_time: false, tooltip: '',
+        placeholder: Fecha, border: '', enabled: true, foreground: '', visible: true,
+        font_size: null, font: '', spacing_above: small, spacing_below: small, italic: false,
+        date: '', min_date: '', background: '', bold: false, underline: false, format: ''}
+      name: bxfecha
+      layout_properties: {grid_position: 'KWVQRD,VZGWWQ'}
+    - type: Label
+      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+        visible: true, text: Tarea, font_size: null, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+        underline: false, icon: ''}
+      name: label_2
+      layout_properties: {grid_position: 'CEOMTW,XPNQVV'}
+    - type: TextBox
+      properties: {role: null, align: left, hide_text: false, tooltip: '', placeholder: Tarea,
+        border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+        font: '', spacing_above: small, type: text, spacing_below: small, italic: false,
+        background: '', bold: false, underline: false}
+      name: bxtarea
+      layout_properties: {grid_position: 'BCCRLX,YVJAXV'}
+    - type: Label
+      properties: {role: null, align: left, tooltip: '', border: '', foreground: '',
+        visible: true, text: Detalles, font_size: null, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: false,
+        underline: false, icon: ''}
+      name: label_3
+      layout_properties: {grid_position: 'HUQQYM,NSPTUW'}
+    - type: TextArea
+      properties: {role: null, align: left, height: 91.7926, tooltip: '', placeholder: Detalles,
+        border: '', enabled: true, foreground: '', visible: true, text: '', font_size: null,
+        auto_expand: true, font: '', spacing_above: small, spacing_below: small, italic: false,
+        background: '', bold: false, underline: false}
+      name: bxdetalles
+      layout_properties: {grid_position: 'YMDAXD,GCKKYQ'}
+    - type: FlowPanel
+      properties: {role: null, vertical_align: full, spacing: tiny, align: center,
+        tooltip: '', border: '', foreground: '', visible: true, spacing_above: small,
+        spacing_below: small, background: ''}
+      name: flow_panel_2
+      layout_properties: {grid_position: 'RUWFOS,SSNZMP'}
+      components:
+      - type: Button
+        properties: {role: null, align: full, tooltip: '', border: '', enabled: true,
+          foreground: 'theme:Header Background', visible: true, text: Añadir Tarea,
+          font_size: 20, font: '', spacing_above: small, icon_align: left, spacing_below: small,
+          italic: false, background: 'theme:Accent 1', bold: false, underline: false,
+          icon: ''}
+        name: button_1_copy
+        layout_properties: {grid_position: 'PMICSO,KFHTXY', width: 150, expand: false}
+        event_bindings: {click: button_1_copy_click}
+      - type: Button
+        properties: {role: null, align: full, tooltip: '', border: '', enabled: true,
+          foreground: 'theme:Header Background', visible: true, text: Cerrar, font_size: 20,
+          font: '', spacing_above: small, icon_align: left, spacing_below: small,
+          italic: false, background: 'theme:Accent 1', bold: false, underline: false,
+          icon: ''}
+        name: button_1_copy_2
+        layout_properties: {grid_position: 'PMICSO,KFHTXY', width: 150, expand: false}
+        event_bindings: {click: button_1_copy_2_click}
+  - name: card_1
+    properties: {role: card, col_widths: '{}'}
+    type: ColumnPanel
+    layout_properties: {grid_position: 'PKLHYY,UIOZXL'}
+    components:
+    - name: name
+      properties: {role: null, align: center, tooltip: '', border: '', foreground: '',
+        visible: true, text: Tareas de Juan Carlos, font_size: 30, font: '', spacing_above: small,
+        icon_align: left, spacing_below: small, italic: false, background: '', bold: true,
+        underline: false, icon: ''}
+      type: Label
+      layout_properties: {grid_position: 'LNBZDO,UWKYVA'}
+    - type: FlowPanel
+      properties: {role: null, vertical_align: full, spacing: tiny, align: center,
+        tooltip: '', border: '', foreground: '', visible: true, spacing_above: small,
+        spacing_below: small, background: ''}
+      name: flow_panel_1
+      layout_properties: {grid_position: 'PMICSO,MZBMPA'}
+      components:
+      - type: Button
+        properties: {role: null, align: full, tooltip: '', border: '', enabled: true,
+          foreground: 'theme:Header Background', visible: true, text: Añadir Tarea,
+          font_size: 20, font: '', spacing_above: small, icon_align: left, spacing_below: small,
+          italic: false, background: 'theme:Accent 1', bold: false, underline: false,
+          icon: ''}
+        name: button_1
+        layout_properties: {grid_position: 'PMICSO,KFHTXY', width: 150, expand: false}
+        event_bindings: {click: button_1_click}
+    - type: DataGrid
+      properties:
+        role: null
+        columns:
+        - {id: UEIXTM, title: Fecha, data_key: Fecha, $$hashKey: 'object:61817', width: '175',
+          expand: false}
+        - {id: HHXJYE, title: Tarea, data_key: Tipo, $$hashKey: 'object:61816'}
+        - {id: NLTDRV, title: Detalles, data_key: Detalles, $$hashKey: 'object:61818'}
+        auto_header: true
+        tooltip: ''
+        border: ''
+        foreground: ''
+        rows_per_page: 40
+        visible: true
+        wrap_on: mobile
+        show_page_controls: true
+        spacing_above: small
+        spacing_below: small
+        background: ''
+      name: data_grid_1
+      layout_properties: {grid_position: 'SSBNQL,CYYKUQ'}
+      components:
+      - type: RepeatingPanel
+        properties: {spacing_above: none, spacing_below: none, item_template: Aula_Responsable_Tareas.RowTemplate4}
+        name: repeating_panel_1
+        layout_properties: {}
+- type: Button
+  properties: {role: null, align: right, tooltip: '', border: '', enabled: true, foreground: 'theme:Header
+      Background', visible: true, text: Inicio, font_size: null, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: 'theme:Accent
+      1', bold: false, underline: false, icon: ''}
+  name: button_2
+  layout_properties: {slot: nav-right}
+  event_bindings: {click: button_2_click}
+- type: Button
+  properties: {role: null, align: right, tooltip: '', border: '', enabled: true, foreground: 'theme:Header
+      Background', visible: true, text: Aulas, font_size: null, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: 'theme:Accent
+      1', bold: false, underline: false, icon: ''}
+  name: button_2_copy
+  layout_properties: {slot: nav-right}
+  event_bindings: {click: button_2_copy_click}
+- type: Button
+  properties: {role: null, align: right, tooltip: '', border: '', enabled: true, foreground: 'theme:Header
+      Background', visible: true, text: (aula_name), font_size: null, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: 'theme:Accent
+      1', bold: false, underline: false, icon: ''}
+  name: aulaname
+  layout_properties: {slot: nav-right}
+  event_bindings: {click: aulaname_click}
+- type: Button
+  properties: {role: null, align: right, tooltip: '', border: '', enabled: true, foreground: 'theme:Header
+      Background', visible: true, text: Responsables, font_size: null, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: 'theme:Accent
+      1', bold: false, underline: false, icon: ''}
+  name: button_2_copy_2
+  layout_properties: {slot: nav-right}
+  event_bindings: {click: button_2_copy_2_click}
+- type: Button
+  properties: {role: null, align: right, tooltip: '', border: '', enabled: true, foreground: 'theme:Header
+      Background', visible: true, text: Juan Carlos, font_size: null, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: 'theme:Accent
+      1', bold: false, underline: false, icon: ''}
+  name: responsablename
+  layout_properties: {slot: nav-right}
+  event_bindings: {click: responsablename_click}

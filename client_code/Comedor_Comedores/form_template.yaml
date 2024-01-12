@@ -16,10 +16,14 @@ components:
   type: Label
   layout_properties: {slot: title}
 - name: column_panel_2
-  properties: {}
+  properties: {col_widths: '{}'}
   type: ColumnPanel
   layout_properties: {slot: default}
   components:
+  - type: ColumnPanel
+    properties: {role: card}
+    name: card_2
+    layout_properties: {slot: default, grid_position: 'GBNEOG,IIFSWZ'}
   - name: card_1
     properties: {role: card, col_widths: '{}'}
     type: ColumnPanel

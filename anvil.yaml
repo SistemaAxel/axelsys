@@ -131,3 +131,21 @@ db_schema:
       admin_ui: {width: 200, order: 5}
       type: date
     title: Comedores_Cal
+  tareas:
+    client: full
+    server: full
+    columns:
+    - name: Tipo
+      admin_ui: {width: 200, order: 0}
+      type: string
+    - name: Fecha
+      admin_ui: {width: 200, order: 1}
+      type: date
+    - name: Detalles
+      admin_ui: {width: 200, order: 2}
+      type: string
+    - name: Responsable
+      admin_ui: {width: 200}
+      type: link_single
+      target: responsables
+    title: Tareas

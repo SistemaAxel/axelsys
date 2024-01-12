@@ -12,7 +12,7 @@ from anvil.tables import app_tables
 class Plantilla(PlantillaTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
-    user = Login()
+    self.user = Login()
     self.init_components(**properties)
 
     # Any code you write here will run before the form opens.

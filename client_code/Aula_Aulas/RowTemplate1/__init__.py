@@ -18,4 +18,4 @@ class RowTemplate1(RowTemplate1Template):
   def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
     
-    anvil.open_form('Aula_Aula', aula = self.item.get_id())
+    anvil.open_form('Aula_Aula', aula = self.item)

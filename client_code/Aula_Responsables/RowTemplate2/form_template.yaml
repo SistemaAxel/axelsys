@@ -1,3 +1,11 @@
 container: {type: DataRowPanel}
-components: []
+components:
+- name: button_1
+  properties: {role: null, align: full, tooltip: '', border: '', enabled: true, foreground: 'theme:Header
+      Background', visible: true, text: Detalles, font_size: 15, font: '', spacing_above: small,
+    icon_align: left, spacing_below: small, italic: false, background: 'theme:Accent
+      1', bold: false, underline: false, icon: ''}
+  type: Button
+  layout_properties: {column: MURNED}
+  event_bindings: {click: button_1_click}
 is_package: true

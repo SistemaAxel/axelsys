@@ -13,7 +13,7 @@ class Aula_Responsables(Aula_ResponsablesTemplate):
   def __init__(self, aula, **properties):
     # Set Form properties and Data Bindings.
     user = Login()
-    self.aula = app_tables.aulas.get_by_id(aula)
+    self.aula = aula
     self.aulaid = aula
     self.init_components(**properties)
     self.aula_back.text = self.aula['Aula']
