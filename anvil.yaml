@@ -6,7 +6,7 @@ services:
 - source: /runtime/services/anvil/users.yml
   client_config: {mfa_timeout_days: 0, require_secure_passwords: true, share_login_status: true,
     use_email: true, allow_remember_me: true, allow_signup: true, enable_automatically: true,
-    confirm_email: true, require_mfa: false, remember_me_days: 365, use_google: false}
+    confirm_email: false, require_mfa: false, remember_me_days: 365, use_google: false}
   server_config: {user_table: users}
 - source: /runtime/services/google.yml
   client_config: {}
