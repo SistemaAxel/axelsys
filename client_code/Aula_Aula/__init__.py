@@ -49,3 +49,9 @@ class Aula_Aula(Aula_AulaTemplate):
   def button_1_copy_click(self, **event_args):
     """This method is called when the button is clicked"""
     self.add_card.visible = True
+
+  def button_1_copy_copy_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    if alert("¿Deseas borrar esta aula?"):
+      self.aula.delete()
+      open_form('Aula_Aulas')
